@@ -335,6 +335,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
         
         .solution-card:hover {
@@ -384,6 +385,25 @@
             border-top: 1px solid #eee;
             font-size: 0.9rem;
             color: var(--gray);
+        }
+        
+        /* New Badge */
+        .new-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        /* Highlight Card */
+        .highlight-card {
+            border: 2px solid var(--accent);
         }
         
         /* All Solutions Section */
@@ -436,6 +456,7 @@
             border-bottom: 1px solid #eee;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         
         .solution-item:last-child {
@@ -445,6 +466,17 @@
         .solution-item i {
             color: var(--success);
             margin-right: 10px;
+        }
+        
+        /* Extra Solutions Badge */
+        .extra-badge {
+            background-color: var(--accent);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 8px;
         }
         
         /* Clients */
@@ -542,19 +574,6 @@
         
         .social-links a:hover {
             background-color: var(--accent);
-        }
-        
-        /* Extra Solutions Badge */
-        .extra-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: var(--accent);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: bold;
         }
         
         /* Footer */
@@ -679,7 +698,7 @@
         <div class="container">
             <h1>Soluções Tecnológicas para Instituições de Saúde</h1>
             <p>A SPDATA é referência nacional em sistemas para hospitais, clínicas, UPAs e hospitais-dia. Oferecemos soluções modularizadas que simplificam processos, promovem excelência operacional e transformam a gestão hospitalar.</p>
-            <a href="#all-solutions" class="cta-button">Conheça Todas as Soluções</a>
+            <a href="#solutions" class="cta-button">Conheça Nossas Soluções</a>
         </div>
     </section>
 
@@ -740,8 +759,8 @@
                 </div>
                 <div class="pain-card">
                     <i class="fas fa-clipboard-check"></i>
-                    <h3>Conformidade Regulatória</h3>
-                    <p>Desafios em atender portarias da ANVISA, legislações específicas do setor saúde e manter documentação adequada para auditorias.</p>
+                    <h3>Relatórios Personalizados</h3>
+                    <p>Dificuldade em criar relatórios customizados, falta de flexibilidade nos layouts e dependência do fornecedor para novas consultas.</p>
                 </div>
             </div>
         </div>
@@ -760,7 +779,8 @@
                 <button class="tab" data-tab="assistencial">Assistencial</button>
                 <button class="tab" data-tab="gestao">Gestão</button>
                 <button class="tab" data-tab="suprimentos">Suprimentos</button>
-                <button class="tab" data-tab="outros">Outros Módulos</button>
+                <button class="tab" data-tab="ferramentas">Ferramentas</button>
+                <button class="tab" data-tab="novidades">Novidades</button>
             </div>
             
             <!-- Faturamento Solutions -->
@@ -1079,43 +1099,44 @@
                 </div>
             </div>
             
-            <!-- Outros Módulos Solutions -->
-            <div id="outros" class="solutions-content">
-                <div class="solution-card">
+            <!-- Ferramentas Solutions -->
+            <div id="ferramentas" class="solutions-content">
+                <div class="solution-card highlight-card">
+                    <div class="new-badge">NOVO</div>
                     <div class="solution-header">
-                        <h3>PACS</h3>
+                        <h3>Agendamento Online</h3>
                     </div>
                     <div class="solution-body">
                         <ul>
-                            <li>Armazenamento de imagens DICOM</li>
-                            <li>Visualizador web integrado</li>
-                            <li>Reconstruções multiplanares</li>
-                            <li>Gravação em CD/DVD</li>
-                            <li>Impressão sem perda de qualidade</li>
-                            <li>Acelerador de laudos com voz</li>
+                            <li>Portal web para agendamentos</li>
+                            <li>Integração com site da instituição</li>
+                            <li>Agendamento 24/7</li>
+                            <li>Confirmação por SMS/email</li>
+                            <li>Lembretes automáticos</li>
+                            <li>Cancelamento online</li>
                         </ul>
                     </div>
                     <div class="solution-footer">
-                        <i class="fas fa-x-ray"></i> Diagnóstico por imagem otimizado
+                        <i class="fas fa-calendar-check"></i> Conveniência total para pacientes
                     </div>
                 </div>
                 
-                <div class="solution-card">
+                <div class="solution-card highlight-card">
                     <div class="solution-header">
-                        <h3>Folha de Pagamento</h3>
+                        <h3>Gerador de Relatórios</h3>
                     </div>
                     <div class="solution-body">
                         <ul>
-                            <li>Cálculo de folha</li>
-                            <li>Controle de ponto eletrônico</li>
-                            <li>Cálculo de rescisão</li>
-                            <li>Cálculo de férias e 13º</li>
-                            <li>Integração com contabilidade</li>
-                            <li>Emissão de guias e relatórios</li>
+                            <li>Criação de layouts personalizados</li>
+                            <li>Definição livre de filtros e parâmetros</li>
+                            <li>Exportação em múltiplos formatos (PDF, Excel, Word)</li>
+                            <li>Agendamento de relatórios automáticos</li>
+                            <li>Distribuição por email automática</li>
+                            <li>Interface drag-and-drop intuitiva</li>
                         </ul>
                     </div>
                     <div class="solution-footer">
-                        <i class="fas fa-users"></i> Gestão completa de RH
+                        <i class="fas fa-chart-bar"></i> Total liberdade para criação de relatórios
                     </div>
                 </div>
                 
@@ -1134,26 +1155,109 @@
                         </ul>
                     </div>
                     <div class="solution-footer">
-                        <i class="fas fa-chart-bar"></i> BI especializado para saúde
+                        <i class="fas fa-brain"></i> BI especializado para saúde
                     </div>
                 </div>
                 
                 <div class="solution-card">
                     <div class="solution-header">
-                        <h3>Controle de Acesso/Visitantes</h3>
+                        <h3>Portal de Serviços</h3>
                     </div>
                     <div class="solution-body">
                         <ul>
-                            <li>Registro de entradas e saídas</li>
-                            <li>Controle por catraca eletrônica</li>
-                            <li>Identificação por crachá/biometria</li>
-                            <li>Controle de permissões</li>
-                            <li>Localização de funcionários</li>
-                            <li>Controle de visitantes</li>
+                            <li>Gestão de chamados</li>
+                            <li>Controle de SLAs</li>
+                            <li>Base de conhecimento</li>
+                            <li>Integração completa</li>
+                            <li>Gerenciamento por ITIL</li>
+                            <li>Relatórios de desempenho</li>
                         </ul>
                     </div>
                     <div class="solution-footer">
-                        <i class="fas fa-id-card"></i> Segurança e controle de acesso
+                        <i class="fas fa-headset"></i> Suporte e atendimento integrado
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Novidades Solutions -->
+            <div id="novidades" class="solutions-content">
+                <div class="solution-card">
+                    <div class="new-badge">NOVO</div>
+                    <div class="solution-header">
+                        <h3>Checagem Beira Leito</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul>
+                            <li>Registro de sinais vitais</li>
+                            <li>Controle de administração de medicamentos</li>
+                            <li>Anotações de enfermagem</li>
+                            <li>Integração com prescrições</li>
+                            <li>Alertas de medicamentos atrasados</li>
+                            <li>Registro em tempo real</li>
+                        </ul>
+                    </div>
+                    <div class="solution-footer">
+                        <i class="fas fa-bed"></i> Assistência direta ao paciente
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="new-badge">NOVO</div>
+                    <div class="solution-header">
+                        <h3>Boletim Anestésico</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul>
+                            <li>Registro detalhado da anestesia</li>
+                            <li>Monitoramento de sinais vitais</li>
+                            <li>Controle de medicamentos anestésicos</li>
+                            <li>Rastreabilidade completa</li>
+                            <li>Integração com bloco cirúrgico</li>
+                            <li>Relatórios estatísticos</li>
+                        </ul>
+                    </div>
+                    <div class="solution-footer">
+                        <i class="fas fa-syringe"></i> Segurança no procedimento anestésico
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="new-badge">NOVO</div>
+                    <div class="solution-header">
+                        <h3>Partograma</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul>
+                            <li>Monitoramento do trabalho de parto</li>
+                            <li>Registro de dilatação cervical</li>
+                            <li>Controle de batimentos cardíacos fetais</li>
+                            <li>Alertas de situações de risco</li>
+                            <li>Integração com prontuário materno</li>
+                            <li>Gráficos evolutivos automáticos</li>
+                        </ul>
+                    </div>
+                    <div class="solution-footer">
+                        <i class="fas fa-baby"></i> Segurança no parto e nascimento
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="new-badge">NOVO</div>
+                    <div class="solution-header">
+                        <h3>Curva de Crescimento</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul>
+                            <li>Monitoramento do desenvolvimento infantil</li>
+                            <li>Curvas de crescimento OMS</li>
+                            <li>Acompanhamento de peso e altura</li>
+                            <li>Alertas de desvios nutricionais</li>
+                            <li>Gráficos comparativos automáticos</li>
+                            <li>Histórico completo do paciente</li>
+                        </ul>
+                    </div>
+                    <div class="solution-footer">
+                        <i class="fas fa-child"></i> Acompanhamento pediátrico especializado
                     </div>
                 </div>
             </div>
@@ -1336,33 +1440,33 @@
                 
                 <div class="category-card">
                     <div class="category-header">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Conformidade & Extras</h3>
+                        <i class="fas fa-star"></i>
+                        <h3>Novidades & Ferramentas</h3>
                     </div>
                     <div class="category-body">
                         <div class="solution-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>SAC - Atendimento ao Cliente</span>
+                            <span>Agendamento Online <span class="extra-badge">NOVO</span></span>
                         </div>
                         <div class="solution-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>LGPD Saúde <span class="extra-badge">NOVO</span></span>
+                            <span>Gerador de Relatórios</span>
                         </div>
                         <div class="solution-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>EFD-Reinf <span class="extra-badge">NOVO</span></span>
+                            <span>Checagem Beira Leito <span class="extra-badge">NOVO</span></span>
                         </div>
                         <div class="solution-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>SGH Quali <span class="extra-badge">NOVO</span></span>
+                            <span>Boletim Anestésico <span class="extra-badge">NOVO</span></span>
                         </div>
                         <div class="solution-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Sistema de Repasses (RPA)</span>
+                            <span>Partograma <span class="extra-badge">NOVO</span></span>
                         </div>
                         <div class="solution-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Controle de Regras Contratuais <span class="extra-badge">NOVO</span></span>
+                            <span>Curva de Crescimento <span class="extra-badge">NOVO</span></span>
                         </div>
                     </div>
                 </div>
